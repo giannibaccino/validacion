@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 //TODO: componente para el listado de mis juegos
 @Component({
@@ -8,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListGameComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+  }
+
+  onclickCreate(){
+    this.router.navigate(['newgame']);
+  }
+
+  onclickInvite(){
+    console.log("INVITACION");
+  }
+
+  onclickList(){
+    this.router.navigate(['gamelist']);
   }
 
 }

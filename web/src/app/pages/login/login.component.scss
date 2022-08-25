@@ -1,0 +1,36 @@
+.container{
+    height: 75vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    margin: auto;
+}
+
+.btn-google{
+    background-color: #2671fc;
+    border: solid 1px #2671fc;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 8px;
+}
+
+.btn-google:hover{
+    cursor: pointer;
+    background-color: white;
+    border: solid 1px #2671fc;
+    color: #2671fc;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 8px;
+}

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { User } from '../model/user';
+import {Auth, signInWithPopup, GoogleAuthProvider} from '@angular/fire/auth'
 
 //TODO: servicio para autenticación con google y firebase
 @Injectable({
@@ -8,7 +9,8 @@ import { User } from '../model/user';
 export class AuthService {
 
   user: User;
-  constructor() {
+  constructor(private auth:Auth) {
+    
     this.user =  {
       uid: "ffff",
       displayName: "Raul Alzate",
@@ -16,5 +18,9 @@ export class AuthService {
       emailVerified: false,
       email: "email@gmail.com"
     };
+   }
+
+   loginWithGoogle(){
+    return signInWithPopup(this.auth,new GoogleAuthProvider())
    }
 }
